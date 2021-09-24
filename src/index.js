@@ -9,6 +9,7 @@ import scene from "./Scene.js"
 import './OrbitImplementation.js'
 import './StatsImplementations.js'
 import guiImplementation from "./GuiImplementation.js";
+import plane from "./Plane.js";
 
 
 scene.add(cube)
@@ -28,7 +29,7 @@ loopMachine.addCallback(() => {
 
 loopMachine.start()
 keyListener.start()
-guiImplementation.start()
+// guiImplementation.start()
 
 // setTimeout(() => {
 //     guiImplementation.stop()
@@ -40,3 +41,4 @@ guiImplementation.start()
 // }, 5000);
 
 
+scene.add( plane );
