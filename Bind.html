@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Por que usamos Bind?</title>
+</head>
+
+<body>
+    <script>
+        let person1 = {
+            name: 'Juan',
+            getName() {
+                console.log(this);
+            }
+        }
+        let person2 = {
+            name: 'Lucas'
+        }
+        let person3 = {
+            name: 'Mateo'
+        }
+        person1.getName()
+        person1.getName.bind(person2)()
+
+
+    </script>
+</body>
+
+</html>
