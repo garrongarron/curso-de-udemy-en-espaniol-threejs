@@ -1,8 +1,16 @@
-import camera from "./Camera.js";
-import renderer from "./Renderer.js";
+import camera from "./basic/Camera.js";
+import loopMachine from "./basic/LoopMachine.js";
+import renderer from "./basic/Renderer.js";
+import cube from "./Cube.js";
 
-const controls = new THREE.OrbitControls( camera, renderer.domElement );
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enablePan = false;
 controls.enableZoom = true;
-controls.target.set( 0, 0, 0 );
-controls.update();
+loopMachine.addCallback(() => {
+    controls.target.set(
+        cube.position.x,
+        cube.position.y,
+        cube.position.z,
+    );
+    controls.update();
+})

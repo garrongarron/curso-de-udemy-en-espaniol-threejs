@@ -1,6 +1,6 @@
-import cache from "./Cache.js"
+import cache from "./basic/Cache.js"
 import cube from "./Cube.js"
-import { GUI } from "./GUI.js"
+import { GUI } from "./basic/GUI.js"
 
 class GuiImplementation {
     constructor() {
